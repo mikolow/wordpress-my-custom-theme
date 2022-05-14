@@ -1,0 +1,111 @@
+@use "src/scss/abstracts/vars" as *;
+
+//transiotion
+@mixin basicTransition {
+    transition: all 0.2s;
+}
+
+@mixin basicTransitionLong {
+    transition: all 0.5s;
+}
+
+//media query
+@mixin maxw($br) {
+    @media (max-width: $br) {
+        @content;
+    }
+}
+
+@mixin minw($br) {
+    @media (min-width: $br) {
+        @content;
+    }
+}
+
+
+//buttons
+@mixin btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: bold;
+    min-width: 256px;
+    min-height: 46px;
+    background-color: $color1;
+    color: $white;
+    cursor: pointer;
+    @include basicTransition;
+
+    &:hover {
+        background-color: $color5;
+    }
+
+    @include maxw($mobileBreakpoint) {
+        min-width: 156px;
+        min-height: 30px;
+    }
+    @include minw($br-hd) {
+        min-height: 58px;
+    }
+}
+
+//img in background
+@mixin withCssBackground {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+@mixin to-white {
+    filter: brightness(0) invert(1);
+}
+
+@mixin flex {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    gap: 20px;
+}
+
+
+//custom scrollbar
+@mixin customScrollbar($foreground-color: $color6, $background-color: #color5, $width: 8px, $height: 12px) {
+    // For Google Chrome
+    &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: $background-color;
+    }
+
+    &::-webkit-scrollbar {
+        width: $width;
+        height: $height; //for horizontal scrollbars
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: $foreground-color;
+    }
+
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+
+    //For Firefox
+    & {
+        scrollbar-color: $foreground-color $background-color; //thumb and track
+        scrollbar-width: thin;
+    }
+}
+

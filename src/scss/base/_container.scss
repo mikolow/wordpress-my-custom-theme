@@ -1,0 +1,22 @@
+@use "../abstracts/main" as *;
+
+.container {
+    max-width: $br-hd;
+    margin: 0 auto;
+    padding: 0 142px;
+    @include basicTransitionLong;
+
+    @include maxw($br-xl) {
+        max-width: $br-xl;
+        padding: 0 50px;
+    }
+    @include maxw($mobileBreakpoint) {
+        max-width: $br-md;
+        padding: 0 28px;
+    }
+
+    @include maxw($br-sm) {
+        max-width: $br-md;
+        padding: 0 16px;
+    }
+}

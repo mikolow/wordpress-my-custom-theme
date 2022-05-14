@@ -1,0 +1,48 @@
+@use "src/scss/abstracts/main" as *;
+
+.site-header {
+    .sub-menu {
+        z-index: 10;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: -25px;
+        padding: 30px 35px 20px 35px;
+        color: $color4;
+        background: $color3;
+        box-shadow: 0 0 24px 0 #00000024;
+
+        @include maxw($mobileBreakpoint) {
+            position: static;
+            display: none;
+            box-shadow: none;
+            margin: 0;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        li {
+
+            margin-left: 0;
+            padding-bottom: 10px;
+            @include basicTransition;
+
+            &:hover {
+                color: $color2;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    ul li:hover > .sub-menu {
+        @include minw($mobileBreakpoint) {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}

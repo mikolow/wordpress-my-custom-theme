@@ -1,0 +1,78 @@
+{
+    "key": "group_618559c01dc09",
+    "title": "Opcje strony: Cookies",
+    "fields": [
+        {
+            "key": "field_618559cc92fbf",
+            "label": "Treść oświadczenia",
+            "name": "acf__cookies--text",
+            "type": "textarea",
+            "instructions": "Teść pojawiająca się w pasku na dole strony.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Serwis korzysta z plików cookies w celu prawidłowego świadczenia usług, jak również w celach statystycznych oraz reklamowych. Więcej informacji na podstronie",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_618559d492fc0",
+            "label": "Link do polityki cookies",
+            "name": "acf__cookies--link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_618e2c6284241",
+            "label": "Treść przycisku",
+            "name": "acf__cookies--button",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-cookies"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1651849608
+}

@@ -1,0 +1,48 @@
+@use "src/scss/abstracts/main" as *;
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 10px;
+
+    a, span {
+        background-color: $white;
+        color: $color2;
+        padding: 5px 10px;
+        border-radius: 7px;
+        display: inline-flex;
+    }
+
+    .prev, .next {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .prev {
+        &::before {
+            content: "";
+            background-image: url("/src/images/pagination-arrow.svg");
+            //@include withCssBackground;
+            background-size: contain;
+            width: 12px;
+            height: 6px;
+            margin-right: 6px;
+            transform: rotate(180deg);
+        }
+    }
+
+    .next {
+        &::after {
+            content: "";
+            background-image: url("/src/images/pagination-arrow.svg");
+            //@include withCssBackground;
+            background-size: contain;
+            width: 12px;
+            height: 6px;
+            margin-left: 6px;
+        }
+    }
+
+}

@@ -1,0 +1,10 @@
+@use "src/scss/abstracts/main" as *;
+
+.error-404 {
+    height: clamp(300px, 50vh, 1080px);
+    grid-template-columns: 1fr;
+
+    .col {
+        align-items: center;
+    }
+}

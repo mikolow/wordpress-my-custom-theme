@@ -1,0 +1,105 @@
+@use "src/scss/abstracts/main" as *;
+
+.site-header {
+    box-shadow: 0 3px 6px 0 $shadow;
+    min-height: 76px;
+    display: flex;
+
+    @include maxw($br-lg) {
+        min-height: 42px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1rem;
+    z-index: 10;
+    color: $white;
+    background-color: $bg-header;
+    @include basicTransition;
+
+    @include maxw($br-xl) {
+        font-size: 20px;
+    }
+
+    @include maxw($br-lg) {
+        font-size: 14px;
+    }
+
+
+    .inner-header {
+        gap: 1rem;
+        justify-content: space-between;
+        min-height: 42px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-nav-wrap {
+        flex-grow: 1;
+    }
+
+    .site-branding {
+        max-width: 280px;
+        display: inline-flex;
+        padding: 1rem 0;
+        @include maxw($br-lg) {
+            max-width: 160px;
+        }
+
+
+        .custom-logo-link {
+            display: inline-flex;
+
+            .custom-logo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+
+    .main-navigation {
+
+        .nav-container {
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 1rem;
+                padding: 0;
+
+                > .menu-item {
+                    position: relative;
+                    text-align: center;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+
+                    a {
+                        padding: 16px 0;
+                        position: relative;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+

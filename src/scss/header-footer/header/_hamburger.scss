@@ -1,0 +1,24 @@
+@use "src/scss/abstracts/main" as *;
+
+.site-header {
+    @include minw($mobileBreakpoint) {
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @include maxw($mobileBreakpoint) {
+        .hamburger {
+            padding-right: 0;
+        }
+
+        .close-wrap {
+            width: 100%;
+            text-align: right;
+
+            #hamburger-close {
+                padding-right: 15px;
+            }
+        }
+    }
+}

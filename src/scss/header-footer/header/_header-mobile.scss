@@ -1,0 +1,124 @@
+@use "src/scss/abstracts/main" as *;
+
+.am-mobile-scroll {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.site-header {
+    @include maxw($mobileBreakpoint) {
+        li {
+            margin: 0;
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+            .active {
+                transform: translateX(0);
+                transition: all .4s;
+            }
+        }
+
+        .active-menu-link {
+            text-decoration: underline;
+        }
+
+        .main-nav-wrap.active {
+            transform: translateX(0);
+
+            .shutter {
+                opacity: 1;
+            }
+
+            .main-navigation {
+                transform: translateX(0);
+            }
+        }
+
+
+        .main-nav-wrap {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateX(100%);
+            text-align: right;
+            z-index: 12;
+        }
+
+        .shutter {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            @include basicTransition;
+        }
+
+
+        .main-navigation {
+            display: inline-block;
+            text-align: left;
+            height: 90vh;
+            overflow-y: auto;
+            width: 70vw;
+            max-width: 300px;
+            transition: all 0.4s;
+            color: $white;
+            font-weight: 700;
+            background: $color1;
+            border-radius: 0 0 0 16px;
+            z-index: 15;
+            box-shadow: 0 0 24px 0 #00000024;
+            position: relative;
+            transform: translateX(100%);
+
+            .nav-container {
+                .menu {
+                    flex-direction: column;
+                    padding: 22px 6px;
+                    align-items: flex-start;
+
+                    > .menu-item {
+                        padding: 8px 16px;
+                        border-bottom: 1px solid rgba(0, 0, 0, .06);
+                        max-width: 100%;
+                        @media (orientation: landscape) and (max-width: 768px) {
+                            a {
+                                font-size: 1rem;
+                                padding: 0 10px;
+                            }
+                        }
+
+                        a {
+                            font-size: 1rem;
+                            font-weight: 400;
+                            @include maxw(350px) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            a:hover {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.active {
+                transform: translateX(0);
+                margin-right: 40px;
+            }
+        }
+    }
+}

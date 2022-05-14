@@ -1,0 +1,6 @@
+@use "src/scss/abstracts/main" as *;
+
+.footer {
+    background-color: $bg-footer;
+    padding: 1rem 0;
+}

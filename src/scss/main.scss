@@ -1,0 +1,12 @@
+@use "base";
+@use "components";
+@use "header-footer";
+@use "pages";
+
+@use 'guidelines';
+
+@import "/node_modules/aos/dist/aos.css";
+@import "/node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "/node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+

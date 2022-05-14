@@ -1,0 +1,45 @@
+$br-sm: 576px;
+$br-md: 768px;
+$br-lg: 992px;
+$br-xl: 1280px;
+$br-xxl: 1400px;
+$br-hd: 1920px;
+
+$mobileBreakpoint: $br-md;
+
+//base
+$color1: #AA156F;
+$color2: #DEDD22;
+$color3: #0C7834;
+$color4: #353535;
+$color5: #4D4C4C;
+$color6: #F1F1F1;
+
+
+//names
+$white: #FFF;
+$black: #000;
+$text: $color5;
+$headings: $color1;
+
+$bg-header: $color1;
+$bg-footer: $white;
+$bg-site: $white;
+$bg-content: $color6;
+
+$shadow: #00000029;
+
+
+//fonts
+$font1: 'Myriad Pro', sans-serif;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$blackWeight: 900;
+
+
+

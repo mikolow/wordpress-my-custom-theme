@@ -1,0 +1,42 @@
+@use "src/scss/abstracts/main" as *;
+
+.cookies {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background: $color4;
+    text-align: center;
+    text-shadow: 0 3px 6px $shadow;
+
+    &__content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+
+    &__paragraph {
+        font-size: 0.8rem;
+        color: $white;
+        align-self: center;
+        margin: 0;
+    }
+
+    &__link {
+        color: $color1 !important;
+        text-decoration: underline;
+
+        &:visited {
+            color: $color1 !important;
+        }
+
+        &:hover {
+            color: $color1 !important;
+        }
+    }
+}
